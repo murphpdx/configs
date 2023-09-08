@@ -5,7 +5,7 @@ PS1=" > "
 #---------------------
 alias ..='cd ..'
 alias grep='grep -rn --color=auto'
-alias killDockerWithFire="yes | docker system prune -a"
+alias killDockerWithFire="docker stop $(docker ps -a -q); yes | docker system prune -a"
 alias la='ls -a'
 alias ls='ls -G'
 
